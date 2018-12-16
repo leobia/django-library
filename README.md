@@ -36,6 +36,8 @@ python manage.py migrate
 python manage.py runserver
 ```
 
+Aprire un browser e aprire il link http://localhost:8000 e verificare che il server sia partito (dovrebbe essere visualizzata la homepage senza dati).  
+Aprire la pagina http://localhost:8000/admin e entrare con username e password inseriti in precedenza. All'interno di questa pagina potranno essere fatte operazioni CRUD sulle entità presenti.
 
 
 ## Descrizione tecnica
