@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block head_title %}{{ block.super }} | {{ autore.nome }} {{ autore.cognome }}{% endblock head_title %}
+
+{% block content %}
+
+    <h5><strong>{{ autore.nome }} {{ autore.cognome }}</strong></h5>
+    <p><strong>Nazionalità:</strong> {{ autore.nazione }}</p>
+    <br>
+    <h5><strong>Lista Libri: </strong></h5>
+     {% for libro in autore.libro_set.all %}
+         <div class="shadow p-3 mb5 rounded">
+            <p><strong>Titolo:</strong> {{ libro.titolo }}</p>
+            <p><strong>Genere:</strong>
+                {% for genere in libro.genere.all %}
+                    <span>{{ genere.nome }};</span>
+                {% endfor %}
+            </p>
+            <p><strong>ISBN:</strong> {{ libro.isbn}}</p>
+        </div>
+    {% endfor %}
+
+{% endblock content %}
