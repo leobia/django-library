@@ -4,14 +4,39 @@ Libreria è una piccolissima applicazione, sviluppata con l'intento di imparare 
 È stata scritta in python3 e django2. Per la gestione del database viene utilizzata la database API di django in coppia con SQLite.
 > ***Nota*** : La versione di python utilizzata è la 3.7.1, ma dovrebbe essere compatibile con qualsiasi versione di python3
 
-## Installation
+## Installazione
 
-Per far partire il progetto bisogna assicurarsi che sia installato [python 3](https://www.python.org/downloads/) e [django 2](https://docs.djangoproject.com/en/2.1/topics/install/)
+Per fare il setup del progetto bisogna assicurarsi che sia installata [python3](https://www.python.org/downloads/).  
+Consiglio di farsi un virtual environment apposito per il progetto:
+```bash
+python3 -m venv v_env
+```
 
-Se [pip](https://pip.pypa.io/en/stable/installing/) è già installato basta dare il comando bash:
+Attivare poi il virtual environment con uno dei seguenti comandi a seconda del SO:
+Linux/OS X
+```bash
+source v_env/bin/activate
+```
+Windows:
+```bash
+v_env/Scripts/activate
+```
+
+Successivamente installare [django 2](https://docs.djangoproject.com/en/2.1/topics/install/) utilizzando [pip](https://pip.pypa.io/en/stable/installing/) con il seguente comando bash:
 ```bash
 pip install django
 ```
+
+Eseguire questa serie di comandi poi per eseguire le migrazioni del db, creare un superuser per console di amministrazione e far partire il server (assicurarsi di essere sempre all'interno dell'ambiente virtuale):  
+```bash
+python manage.py migrate
+python manage.py createsuperuser
+python manage.py makemigrations libreria
+python manage.py migrate
+python manage.py runserver
+```
+
+
 
 ## Descrizione tecnica
 
