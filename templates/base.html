@@ -13,9 +13,9 @@
     <title>{% block head_title %}Libreria{% endblock head_title %}</title>
   </head>
   <body>
-    <nav class="navbar fixed-top navbar-dark">
+    <nav class="navbar fixed-top navbar-light">
         <div class="navbar-centred">
-            <a class="navbar-brand" href="../">
+            <a class="navbar-brand" href="../index">
               <img src="{%static 'icona.png'%}" width="30" height="30" class="d-inline-block align-top" alt="">
               Libreria
             </a>
@@ -24,7 +24,7 @@
     <br>
     <br>
     <br>
-    <div class="container">
+    <div class="container-fluid">
         {% block content %}
         {% endblock content %}
     </div>

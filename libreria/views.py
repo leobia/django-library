@@ -19,3 +19,6 @@ def autore_detail(request, pk):
 class AutoreDetailViewCB(DetailView):
     model = Autore
     template_name = "autore_detail.html"
+
+def index(request):
+    return render(request, "index.html")

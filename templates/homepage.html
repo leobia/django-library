@@ -5,18 +5,20 @@
 {% block content %}
 
     <h4>I miei libri:</h4>
-    {% for libro in libri %}
-        <div class="shadow p-3 mb5 rounded">
-            <p><strong>Titolo:</strong> {{ libro.titolo }}</p>
-            <p><strong>Autore:</strong> <a href="{{ libro.autore.get_absolute_url }}"> {{ libro.autore }}</a></p>
-            <p><strong>Genere:</strong>
-                {% for genere in libro.genere.all %}
-                    <span>{{ genere.nome }};</span>
-                {% endfor %}
-            </p>
-            <p><strong>Isbn:</strong> {{ libro.isbn }}</p>
-        </div>
-        <br>
-    {% endfor %}
+    <div class="container">
+        {% for libro in libri %}
+            <div class="shadow p-3 mb5 rounded">
+                <p><strong>Titolo:</strong> {{ libro.titolo }}</p>
+                <p><strong>Autore:</strong> <a href="{{ libro.autore.get_absolute_url }}"> {{ libro.autore }}</a></p>
+                <p><strong>Genere:</strong>
+                    {% for genere in libro.genere.all %}
+                        <span>{{ genere.nome }};</span>
+                    {% endfor %}
+                </p>
+                <p><strong>Isbn:</strong> {{ libro.isbn }}</p>
+            </div>
+            <br>
+        {% endfor %}
+    </div>
 
 {% endblock content %}

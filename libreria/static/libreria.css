@@ -4,11 +4,11 @@ body {
 }
 
 .navbar {
-    background-color: #555B6E;
+    background-color: #FAF9F9;
 }
-.navbar-centred{
-    
-}
+
+.navbar-centred {}
+
 @media only screen and (min-width: 768px) {
     .navbar-centred {
         color: red;
@@ -17,14 +17,94 @@ body {
         text-align: center;
         width: 100%;
     }
+
+    .big-banner {
+        background-image: none;
+    }
 }
-.navbar-brand {float:none;}
+
+.navbar-brand {
+    float: none;
+}
 
 h4 {
-    color: #89B0AE;
+    color: #003F91;
     text-align: center;
 }
 
 h5 {
-    color: #89B0AE;
+    color: #5DA9E9;
+}
+
+a {
+    color: #6D326D;
+    font-weight: bold;
+}
+
+.big-banner {
+    background-image: url("shelf-flat2.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    filter: grayscale(100%);
+    text-align: center;
+}
+
+.jumbotron {
+    /* Aggiunto il bg bianco perchè di per se me lo metteva grigio */
+    background-color: rgb(255, 255, 255);
+}
+
+@media (max-width: 767px) {
+    .big-banner {
+        background-image: none;
+    }
+}
+
+.rounded-corners {
+    border-radius: 10px;
+}
+
+#html-card {
+    background-image: url("html-code.png");
+    background-repeat: no-repeat;
+}
+
+#python-card {
+    background-image: url("python-code.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+#django-card {
+    background-image: url("django-code.png");
+    background-repeat: no-repeat;
+}
+
+#js-card {
+    background-image: url("js-code.png");
+    background-repeat: no-repeat;
+}
+
+#css-card {
+    background-image: url("css-code.png");
+    background-repeat: no-repeat;
+}
+
+#bootstarp-card {
+    background-image: url("bootstarp-code.png");
+    background-repeat: no-repeat;
+}
+
+.skill-card {
+    height: 33vh;
+    width: 33vw;
+    border-radius: 10px;
+}
+
+.col-centrata {
+    display: grid;
+    justify-content: center;
+    text-align: center;
 }

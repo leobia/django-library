@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head_title %}{{ block.super }} | Benvenuto! {% endblock head_title %}
+
+
+{% block content %}
+<!--Grid column-->
+
+<div class="jumbotron big-banner">
+    <div class="col-md-5 p-lg-5 mx-auto my-5">
+        <h1 class="display-4 font-weight-normal">Lib!</h1>
+        <p class="lead font-weight-normal">Lib è una semplice applicazione per gestire una libreria personale</p>
+        <a class="btn btn-outline-secondary" href="../libri">Scopri i libri!</a>
+    </div>
+</div>
+
+<div class="jumbotron">
+    <h3 style="text-align: center;">Tecnologie utilizzate</h3>
+    <hr> 
+    <br>
+    <div class="row">
+        <div class="col-md-4 col-centrata">
+            <img class="rounded-circle shadow" src="{%static 'django-logo.png'%}" alt="Django" width="120" height="120">
+            <br>
+            <h5>Django</h5>
+        </div>
+        <div class="col-md-4 col-centrata">
+            <img class="rounded-circle shadow" src="{%static 'html-logo.svg'%}" alt="HTML" width="120" height="120">
+            <br>
+            <h5 class="card-title">HYML</h5>
+        </div>
+        <div class="col-md-4 col-centrata">
+            <img class="rounded-circle shadow" src="{%static 'css-logo.png'%}" alt="CSS" width="120" height="120">
+            <br>
+            <h5 class="card-title">CSS</h5>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}
