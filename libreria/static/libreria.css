@@ -1,6 +1,6 @@
 body {
-    background-color: #FAF9F9;
-    font-family: 'Raleway', sans-serif !important;
+    background-image: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);
+        font-family: 'Raleway', sans-serif !important;
 }
 
 .navbar {
@@ -108,3 +108,9 @@ a {
     justify-content: center;
     text-align: center;
 }
+
+.navbar-fixed-top.scrolled {
+    background-color: #fff !important;
+    transition: background-color 200ms linear;
+}
+
